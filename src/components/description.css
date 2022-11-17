@@ -4,8 +4,34 @@ table {
     background-color: white;
     padding: 20px 50px;
     border-radius: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.24);
 }
 
 th {
     text-align: start;
+    padding: 5px;
+}
+
+thead {
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.24);
+}
+
+.type {
+    text-align: center;
+}
+
+.bi-arrow-down-circle-fill {
+    color: red;
+}
+
+.bi-arrow-up-circle-fill {
+    color: green;
+}
+
+.bi-trash-fill {
+    cursor: pointer;
+}
+
+.bi-trash-fill:hover {
+    color: red;
 }

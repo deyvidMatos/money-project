@@ -15,7 +15,7 @@ function App() {
   const [expanse, setExpanse] = useState(0)
   const [total, setTotal] = useState(0)
 
-  useEffect(() =>{
+  useEffect(() => {
     const amountExpanse = transactionsList
       .filter((item) => item.expanse)
       .map((transaction) => Number(transaction.amount));
@@ -24,18 +24,18 @@ function App() {
       .filter((item) => !item.expanse)
       .map((transaction) => Number(transaction.amount));
 
-      const expanse = amountExpanse.reduce((acc, cur) => acc + cur, 0).toFixed(2)
-      const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2)
+    const expanse = amountExpanse.reduce((acc, cur) => acc + cur, 0).toFixed(2)
+    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2)
 
-     const total = Math.abs(income - expanse).toFixed(2);
-     
-     setIncome(`R$ ${income}`)
-     setExpanse(`R$ ${expanse}`)
-     setTotal(`${Number(income) < Number(expanse) ? '-' : '' }R$ ${total}`)
+    const total = Math.abs(income - expanse).toFixed(2);
+
+    setIncome(`R$ ${income}`)
+    setExpanse(`R$ ${expanse}`)
+    setTotal(`${Number(income) < Number(expanse) ? '-' : ''}R$ ${total}`)
 
   }, [transactionsList])
 
-  const handleAdd = (transaction) =>{
+  const handleAdd = (transaction) => {
     const newArrayTransactions = [...transactionsList, transaction];
 
     setTransactionsList(newArrayTransactions);
@@ -51,7 +51,7 @@ function App() {
         <CashItem icon={'bi bi-arrow-down-circle-fill'} title={'Saida'} value={expanse} />
         <CashItem icon={'bi bi-currency-dollar'} title={'Total'} value={total} />
       </div>
-      <Form handleAdd={handleAdd}/>
+      <Form handleAdd={handleAdd} />
       <Description itens={transactionsList} setItens={setTransactionsList} />
     </div>
   );

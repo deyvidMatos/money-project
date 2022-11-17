@@ -1,7 +1,10 @@
-body {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: .3s ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
   background-color: #DEF5E5;
-  transition: .5s;
 }

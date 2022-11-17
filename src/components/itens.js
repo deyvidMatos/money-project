@@ -1,13 +1,17 @@
 
 const Itens = ({ item, onDelete }) => {
+
+
     return (
         <tr>
             <td>{item.desc}</td>
-            <td>{item.amount}</td>
+            <td>R$ {item.amount}</td>
             <td>
-                {item.expense ?
-                    (<i className="bi bi-arrow-down-circle-fill"></i>)
-                    : (<i className="bi bi-arrow-down-circle-fill"></i>)}
+                {item.expanse ? (
+                    <i className="bi bi-arrow-down-circle-fill"></i>
+                ) : (
+                    <i className="bi bi-arrow-up-circle-fill"></i>
+                )}
             </td>
             <td>
                 <i className="bi bi-trash-fill" onClick={() => onDelete(item.id)} />

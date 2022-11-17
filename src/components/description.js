@@ -3,7 +3,7 @@ import Itens from './itens'
 
 const Description = ({ itens, setItens }) => {
 
-    const onDelete = (ID) =>{
+    const onDelete = (ID) => {
         const newArray = itens.filter((transaction) => transaction.id !== ID)
         setItens(newArray);
         localStorage.setItem('transitions', JSON.stringify(newArray))
@@ -23,9 +23,8 @@ const Description = ({ itens, setItens }) => {
             </thead>
             <tbody>
                 {itens?.map((item, index) => (
-                    <Itens key={index} item={item} onDelete={onDelete}/>
+                    <Itens key={index} item={item} onDelete={onDelete} />
                 ))}
-               
             </tbody>
         </table>
     )
