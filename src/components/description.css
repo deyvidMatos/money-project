@@ -1,0 +1,11 @@
+table {
+    margin: 1%;
+    width: 85%;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 16px;
+}
+
+th {
+    text-align: start;
+}

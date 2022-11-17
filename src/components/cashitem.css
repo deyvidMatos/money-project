@@ -1,0 +1,13 @@
+.item{
+    background-color: white;
+    width: 20%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.itemHeader{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
