@@ -31,7 +31,7 @@ button:hover {
 }
 
 @media (max-width:750px) {
-   .form div{
-    margin: 5px;
-   }
+    .form div {
+        margin: 5px;
+    }
 }

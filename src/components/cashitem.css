@@ -1,4 +1,4 @@
-.item{
+.item {
     background-color: white;
     width: 20%;
     padding: 50px 0;
@@ -8,18 +8,21 @@
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.24);
 }
-.itemHeader{
+
+.itemHeader {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 @media (max-width:750px) {
-   .item{
-    width: 30%;
-   } 
-}
-@media (max-width:400px) {
-    .item{
-     width: 85%;
+    .item {
+        width: 30%;
     }
-  }
+}
+
+@media (max-width:400px) {
+    .item {
+        width: 85%;
+    }
+}

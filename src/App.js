@@ -4,6 +4,7 @@ import CashItem from './components/cashitem';
 import Description from './components/description';
 import Form from './components/form';
 import NavBar from './components/navbar';
+import HomeModal from './components/toHome';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
       </div>
       <Form handleAdd={handleAdd} />
       <Description itens={transactionsList} setItens={setTransactionsList} />
+      <HomeModal />
     </div>
   );
 }
